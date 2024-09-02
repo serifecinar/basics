@@ -11,9 +11,9 @@ namespace basics.Controllers
 			return View();
 		}
 		//course/list
-		public string List()
+		public IActionResult List()
 		{
-			return "course/list";
+			return View();
 		}
 	}
 }
