@@ -3,6 +3,7 @@
 *@
 @{
 }
+@model Course
 
 <!DOCTYPE html>
     <html>
@@ -11,5 +12,11 @@
     </head>
     <body>
     <h1>Course Index Page</h1>
+    <p>
+        Id: @Model.Id
+    </p>
+    <p>
+        Title: @Model.Title
+    </p>
     </body>
     </html>
