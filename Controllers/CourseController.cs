@@ -12,7 +12,7 @@ namespace basics.Controllers
 			var kurs = new Course();
 			kurs.Id = 1;
 			kurs.Title = "Aspnet cor kursu";
-
+			kurs.Description = "Güzel bir kurs";
 			return View(kurs);
 		}
 
