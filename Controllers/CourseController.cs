@@ -11,14 +11,22 @@ namespace basics.Controllers
 		{
 			var kurs = new Course();
 			kurs.Id = 1;
-			kurs.Title = "Aspnet cor kursu";
+			kurs.Title = "Aspnet core kursu";
 			kurs.Description = "Güzel bir kurs";
 			kurs.Image = "1.jpg";
 			return View(kurs);
 		}
-
-		//course/list
-		public IActionResult List()
+        public IActionResult Details()
+        {
+            var kurs = new Course();
+            kurs.Id = 1;
+            kurs.Title = "Aspnet core kursu";
+            kurs.Description = "Güzel bir kurs";
+            kurs.Image = "1.jpg";
+            return View(kurs);
+        }
+        //course/list
+        public IActionResult List()
 		{
 			var kurslar = new List<Course>()
 			{
