@@ -13,6 +13,7 @@ namespace basics.Controllers
 			kurs.Id = 1;
 			kurs.Title = "Aspnet cor kursu";
 			kurs.Description = "Güzel bir kurs";
+			kurs.Image = "1.jpg";
 			return View(kurs);
 		}
 
