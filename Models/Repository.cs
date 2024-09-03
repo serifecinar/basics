@@ -20,5 +20,10 @@
                 return _courses;
             } 
         }    
+
+        public static Course? GetById(int? Id)
+        {
+            return _courses.FirstOrDefault(c => c.Id == Id);
+        }
     }
 }

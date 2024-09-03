@@ -7,22 +7,16 @@ namespace basics.Controllers
 	{
 		//course
 		//course/index
-		public IActionResult Index()
-		{
-			var kurs = new Course();
-			kurs.Id = 1;
-			kurs.Title = "Aspnet core kursu";
-			kurs.Description = "Güzel bir kurs";
-			kurs.Image = "1.jpg";
-			return View(kurs);
-		}
-        public IActionResult Details()
+
+        public IActionResult Details(int? id)
         {
-            var kurs = new Course();
-            kurs.Id = 1;
-            kurs.Title = "Aspnet core kursu";
-            kurs.Description = "Güzel bir kurs";
-            kurs.Image = "1.jpg";
+			if(id == null)
+			{
+				//return Redirect("/course/list");
+				return RedirectToAction("List", "Course");
+			}
+			var kurs = Repository.GetById(id);
+
             return View(kurs);
         }
         //course/list
